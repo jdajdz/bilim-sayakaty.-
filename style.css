@@ -1,0 +1,85 @@
+/* --- ОЮНДУН ИЧКИ ЭЛЕМЕНТТЕРИ (АК ТЕРЕЗЕ ҮЧҮН) --- */
+
+/* 1. ЖАЛБЫРАК ТАБУУ (MEMORY GAME) ТОРЧОСУ */
+.mem-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 мамыча кылат */
+    gap: 12px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 450px;
+}
+
+/* КАРТАЛАРДЫН ӨЛЧӨМҮ ЖАНА КӨРҮНҮШҮ */
+.mem-card {
+    height: 90px;
+    background: #1a1a1a; /* Жабык кезде кара түс */
+    border: 3px solid #d4af37;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: transparent; /* Иконка жабык кезде көрүнбөйт */
+    transition: transform 0.4s, background 0.3s;
+}
+
+/* КАРТА АЧЫЛГАНДАГЫ СТИЛЬ */
+.mem-card.open {
+    background: #d4af37;
+    color: white !important; /* Иконканы көрсөтөт */
+    transform: rotateY(180deg);
+}
+
+/* 2. ИКС-НӨЛ (TIC-TAC-TOE) ТОРЧОСУ */
+.ttt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3x3 торчо */
+    gap: 15px;
+    max-width: 320px;
+    margin: 25px auto;
+}
+
+/* ИКС-НӨЛ КЛЕТКАЛАРЫ */
+.ttt-cell {
+    width: 100px;
+    height: 100px;
+    background: #f8f9fa;
+    border: 3px solid #d4af37;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #1a1a1a !important; /* X жана 0 кара түстө болот */
+}
+
+/* 3. КИРГИЗҮҮ ТАЛААЛАРЫ (ПРОГРАММАЛОО ЖАНА САНДЫ ТАП) */
+input[type="text"], input[type="number"] {
+    padding: 15px;
+    font-size: 20px;
+    border: 3px solid #d4af37;
+    border-radius: 12px;
+    width: 80%;
+    margin: 15px 0;
+    text-align: center;
+    outline: none;
+}
+
+/* ОЮНДУН ТЕКСТТЕРИ (АК ТЕРЕЗЕДЕ) */
+#display h2 { color: #1a1a1a; margin-bottom: 15px; }
+#display p { color: #333; font-size: 22px; }
+
+/* ДЕҢГЭЭЛ КӨРСӨТКҮЧҮ */
+.level-badge {
+    background: #d4af37;
+    color: #111;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
